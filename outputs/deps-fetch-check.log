@@ -1,0 +1,137 @@
+=== dependency fetchability check ===
+source: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src
+pinned HEAD: 0085a1ff885d6a446369cf73a4430f75af22be55
+date: 2026-11-24T14:33:55Z
+conanfile pins (grep, conanfile.py):
+26:    requires = [
+35:    test_requires = [
+39:    tool_requires = [
+105:        # Conan 2 requires transitive headers to be specified
+107:        self.requires('boost/1.83.0', force=True, **transitive_headers_opt)
+108:        self.requires('date/3.0.4', **transitive_headers_opt)
+109:        self.requires('lz4/1.10.0', force=True)
+110:        self.requires('protobuf/3.21.12', force=True)
+111:        self.requires('sqlite3/3.49.1', force=True)
+113:            self.requires('jemalloc/5.3.0')
+115:            self.requires('rocksdb/10.0.1')
+116:        self.requires('xxhash/0.8.3', **transitive_headers_opt)
+169:        libxrpl.requires = [
+194:            libxrpl.requires.append('rocksdb::librocksdb')
+
+--- grpc 1.50.1 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/grpc/all/conandata.yml
+conandata fetch: OK
+version 1.50.1: NOT LISTED in current conandata.yml (versions present: 1.54.3, 1.69.0, 1.84.0)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- libarchive 3.8.1 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/libarchive/all/conandata.yml
+conandata fetch: OK
+recorded sha256: 19f917d42d530f98815ac824d90c7eaf648e9d9a50e4f309c812457ffa5496b5
+source url: https://github.com/libarchive/libarchive/releases/download/v3.8.1/libarchive-3.8.1.tar.xz
+source fetch status (following redirects): 200
+
+--- nudb 2.0.9 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/nudb/all/conandata.yml
+conandata fetch: OK
+recorded sha256: a088dac72931f7b51b4def1f1b505e4e6c4d1c8c8b41fa3c5f70b989ddcaeba9
+source url: https://github.com/CPPAlliance/NuDB/archive/2.0.9.tar.gz
+source fetch status (following redirects): 200
+
+--- openssl 1.1.1w ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/openssl/1.x.x/conandata.yml
+conandata fetch: OK
+recorded sha256: cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8
+source url: https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1w/openssl-1.1.1w.tar.gz
+source fetch status (following redirects): 200
+
+--- soci 4.0.3 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/soci/all/conandata.yml
+conandata fetch: OK
+version 4.0.3: NOT LISTED in current conandata.yml (versions present: 4.1.4)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- zlib 1.3.1 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/zlib/all/conandata.yml
+conandata fetch: OK
+version 1.3.1: NOT LISTED in current conandata.yml (versions present: 1.4)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- doctest 2.4.11 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/doctest/all/conandata.yml
+conandata fetch: FAILED (HTTP Error 404: Not Found)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- protobuf 3.21.12 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/protobuf/all/conandata.yml
+conandata fetch: OK
+version 3.21.12: NOT LISTED in current conandata.yml (versions present: 5.29.6, 6.33.5, 7.35.1, 7.36.2)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- boost 1.83.0 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/boost/all/conandata.yml
+conandata fetch: OK
+recorded sha256: 6478edfe2f3305127cffe8caf73ea0176c53769f4bf1585be237eb30798c3b8e
+source url: https://archives.boost.io/release/1.83.0/source/boost_1_83_0.tar.bz2
+source fetch status (following redirects): 200
+
+--- date 3.0.4 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/date/all/conandata.yml
+conandata fetch: OK
+version 3.0.4: NOT LISTED in current conandata.yml (versions present: 2.4.1, 3.0.5)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- lz4 1.10.0 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/lz4/all/conandata.yml
+conandata fetch: OK
+recorded sha256: 537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b
+source url: https://github.com/lz4/lz4/archive/v1.10.0.tar.gz
+source fetch status (following redirects): 200
+
+--- sqlite3 3.49.1 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/sqlite3/all/conandata.yml
+conandata fetch: OK
+version 3.49.1: NOT LISTED in current conandata.yml (versions present: 3.44.2, 3.51.3, 3.53.4, 3.54.1)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- rocksdb 10.0.1 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/rocksdb/all/conandata.yml
+conandata fetch: OK
+version 10.0.1: NOT LISTED in current conandata.yml (versions present: 10.10.1, 11.1.1)
+source fetch status: NOT CHECKED (no URL extracted)
+
+--- xxhash 0.8.3 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/xxhash/all/conandata.yml
+conandata fetch: OK
+recorded sha256: aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80
+source url: https://github.com/Cyan4973/xxHash/archive/v0.8.3.tar.gz
+source fetch status (following redirects): 200
+
+--- snappy 1.1.10 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/snappy/all/conandata.yml
+conandata fetch: OK
+recorded sha256: 49d831bffcc5f3d01482340fe5af59852ca2fe76c3e05df0e67203ebbe0f1d90
+source url: https://github.com/google/snappy/archive/1.1.10.tar.gz
+source fetch status (following redirects): 200
+
+--- jemalloc 5.3.0 ---
+recipe conandata: https://raw.githubusercontent.com/conan-io/conan-center-index/master/recipes/jemalloc/all/conandata.yml
+conandata fetch: OK
+recorded sha256: 2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa
+source url: https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
+source fetch status (following redirects): 200
+
+--- doctest recipe layout (conandata.yml 404s; inspect conanfile.py directly) ---
+doctest conanfile.py fetch FAILED
+
+--- vendored in-tree libraries (no external fetch; present at pinned commit) ---
+vendored: external/secp256k1 — present, 165 files
+vendored: external/ed25519-donna — present, 42 files
+vendored: external/antithesis-sdk — present, 5 files
+
+--- Dockerfile system packages (Ubuntu 24.04 apt) ---
+32:RUN apt install --yes curl git libssl-dev pipx python3.12-dev python3-pip make gcc-13 g++-13 libprotobuf-dev protobuf-compiler logrotate cron
+cmake 3.25.1 tarball (Dockerfile builds cmake from source):
+fetch status (following redirects): 200
+
+=== dependency fetchability check done ===

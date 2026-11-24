@@ -1,0 +1,127 @@
+=== mismatch diagnosis: R1 (src-a/build-a) vs R3 (src-b/build-b), gcc 13 ===
+date: 2026-11-24T14:38:17Z
+
+--- artifact sizes ---
+-rw-rw---- 1 root nogroup 1054016 Nov 24 14:29 /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/secp256k1/src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+-rw-rw---- 1 root nogroup 1054016 Nov 24 14:37 /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+-rw-rw---- 1 root nogroup 2203822 Nov 24 14:29 /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/secp256k1/lib/libsecp256k1.a
+-rw-rw---- 1 root nogroup 2203822 Nov 24 14:37 /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/lib/libsecp256k1.a
+-rw-rw---- 1 root nogroup 534504 Nov 24 14:29 /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/ed25519/CMakeFiles/ed25519.dir/ed25519.c.o
+-rw-rw---- 1 root nogroup 534504 Nov 24 14:37 /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/ed25519/CMakeFiles/ed25519.dir/ed25519.c.o
+
+--- cmp: first differing byte offsets (secp256k1.c.o) ---
+ 594345 141 142
+ 594485 141 142
+ 594604 141 142
+ 594721 141 142
+ 594882 141 142
+number of differing bytes: 15
+
+--- strings unique to R1 object (path mentions) ---
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/secp256k1/src
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ecdh
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ecdh/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ellswift
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ellswift/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/extrakeys
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/extrakeys/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/musig
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/musig/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/schnorrsig
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/schnorrsig/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/secp256k1.c
+--- strings unique to R3 object (path mentions) ---
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/src
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ecdh
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ecdh/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ellswift
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ellswift/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/extrakeys
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/extrakeys/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/musig
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/musig/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/schnorrsig
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/schnorrsig/../../../include
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/secp256k1.c
+
+--- DWARF comp_dir (readelf --debug-dump=info, first CU) ---
+    <d>   DW_AT_producer    : (indirect string, offset: 0x2a40): GNU C89 13.3.0 -mtune=generic -march=x86-64 -g -O3 -O2 -std=c90 -fstack-protector -fvisibility=hidden -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection
+    <12>   DW_AT_name        : (indirect line string, offset: 0): /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/secp256k1.c
+    <d>   DW_AT_producer    : (indirect string, offset: 0x2a40): GNU C89 13.3.0 -mtune=generic -march=x86-64 -g -O3 -O2 -std=c90 -fstack-protector -fvisibility=hidden -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection
+    <12>   DW_AT_name        : (indirect line string, offset: 0): /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/secp256k1.c
+
+--- strings diff (R1 vs R3, ed25519.c.o) ---
+135,137c135,137
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/ed25519
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/ed25519-donna
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/ed25519-donna/ed25519.c
+---
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/ed25519
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519.c
+
+--- strings diff (R1 vs R3, libsecp256k1.a members) ---
+1,16c1,16
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/secp256k1/src
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/../include
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ecdh
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ecdh/../../../include
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ellswift
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/ellswift/../../../include
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/extrakeys
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/extrakeys/../../../include
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/musig
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/musig/../../../include
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/schnorrsig
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/modules/schnorrsig/../../../include
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/precomputed_ecmult.c
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/precomputed_ecmult_gen.c
+< /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a/external/secp256k1/src/secp256k1.c
+---
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/src
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/../include
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ecdh
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ecdh/../../../include
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ellswift
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/ellswift/../../../include
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/extrakeys
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/extrakeys/../../../include
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/musig
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/musig/../../../include
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/schnorrsig
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/modules/schnorrsig/../../../include
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/precomputed_ecmult.c
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/precomputed_ecmult_gen.c
+> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/secp256k1/src/secp256k1.c
+
+--- timestamp check: no __DATE__/__TIME__ in these objects ---
+no build-date strings found in R1 object
+
+--- ar member headers (deterministic mode: zero timestamps?) ---
+rw-r--r-- 0/0 1054016 Jan  1 00:00 1970 secp256k1.c.o
+rw-r--r-- 0/0 1053568 Jan  1 00:00 1970 precomputed_ecmult.c.o
+rw-r--r-- 0/0  92944 Jan  1 00:00 1970 precomputed_ecmult_gen.c.o
+rw-r--r-- 0/0 1054016 Jan  1 00:00 1970 secp256k1.c.o
+rw-r--r-- 0/0 1053568 Jan  1 00:00 1970 precomputed_ecmult.c.o
+rw-r--r-- 0/0  92944 Jan  1 00:00 1970 precomputed_ecmult_gen.c.o
+
+--- R4 control (prefix-map remediation) ---
+R4's build directory (subset-build-b) was reused by the R3diag rebuild, so R4's
+object files no longer exist on disk. The R4 evidence is the digest comparison:
+outputs/compare-R1-R4.log records 6/6 artifacts IDENTICAL between R1 and R4, and
+outputs/subset-R4.log lists R4's full SHA-256 digests, which equal R1's exactly.
+The prefix-map flags therefore fully normalize the absolute-path difference.
+
+--- addendum: DW_AT_comp_dir (checked after the first pass; the earlier grep -m2 stopped at producer+name) ---
+R1 secp256k1.c.o DW_AT_comp_dir: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a/secp256k1/src
+R3 secp256k1.c.o DW_AT_comp_dir: same path with subset-build-a replaced by subset-build-b
+Conclusion: the R1/R3 difference is exactly two embedded absolute paths — the DWARF
+compilation directory (build dir) and the DWARF source-file table (source dir). No
+timestamps, no ordering differences, no codegen differences: same sizes, 15 differing
+bytes total in secp256k1.c.o, all single-character 'a'->'b' path substitutions.

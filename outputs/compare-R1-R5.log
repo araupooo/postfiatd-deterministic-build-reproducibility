@@ -1,0 +1,37 @@
+=== digest comparison: R1 vs R5 ===
+digests A: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/digests-R1.txt
+digests B: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/digests-R5.txt
+--- R1 ---
+457d75179198bd5a0c875de0b4d1b25f982cdb26ea03bb1a6be9306d71f77cbd  CMakeFiles/ed25519.dir/ed25519.c.o
+46fb3aeeffe0b55becaab28d743e359add00697e0e4db76ba6e5094f6108a7ae  lib/libsecp256k1.a
+0dad7a8ff9be23d7508914c9ea4bbf31f90409b950668eb8ebe3c06e7659edf6  output/Release/lib/libed25519.a
+da44af0e8e2ba5c391fa98b40b982b11b12a9b15678322b7421cfb3abe80f022  src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+4f2db09b88156e13ead1c34f019164d7d3041e1cd5bb790bec967a1dc3d5454c  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+56cc8461d5f6738e21e26d06dbfc472ba107a0e05691fec666be4ac3265f8e5d  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+--- R5 ---
+f068de89b03836b8c454936b7564edb80177a1c7982797e9c2dbb5f3cd9ecec5  CMakeFiles/ed25519.dir/ed25519.c.o
+606a3d38e61aff4da72e66ed35a17b4cb70f4f27e8bf14bab425d47fb37eda87  lib/libsecp256k1.a
+ed3c79bf6a25439401869a7018c9011ed8d7c87001d82d105c54d981f19de5e8  output/Release/lib/libed25519.a
+5df051f53a1d8aee612bd442d8ac19a16a50ea2e508a749d9fd1b14c3b27f41b  src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+c317155a179429a70ae6dc6a9f9fead747fae88f9b76a1f5befb1711f047f529  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+03c5432c464049b5b1673656e9d12072abf20cf7669d8349da75c7f3c140087f  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+MISMATCH: CMakeFiles/ed25519.dir/ed25519.c.o
+  R1: 457d75179198bd5a0c875de0b4d1b25f982cdb26ea03bb1a6be9306d71f77cbd
+  R5: f068de89b03836b8c454936b7564edb80177a1c7982797e9c2dbb5f3cd9ecec5
+MISMATCH: lib/libsecp256k1.a
+  R1: 46fb3aeeffe0b55becaab28d743e359add00697e0e4db76ba6e5094f6108a7ae
+  R5: 606a3d38e61aff4da72e66ed35a17b4cb70f4f27e8bf14bab425d47fb37eda87
+MISMATCH: output/Release/lib/libed25519.a
+  R1: 0dad7a8ff9be23d7508914c9ea4bbf31f90409b950668eb8ebe3c06e7659edf6
+  R5: ed3c79bf6a25439401869a7018c9011ed8d7c87001d82d105c54d981f19de5e8
+MISMATCH: src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+  R1: da44af0e8e2ba5c391fa98b40b982b11b12a9b15678322b7421cfb3abe80f022
+  R5: 5df051f53a1d8aee612bd442d8ac19a16a50ea2e508a749d9fd1b14c3b27f41b
+MISMATCH: src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+  R1: 4f2db09b88156e13ead1c34f019164d7d3041e1cd5bb790bec967a1dc3d5454c
+  R5: c317155a179429a70ae6dc6a9f9fead747fae88f9b76a1f5befb1711f047f529
+MISMATCH: src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+  R1: 56cc8461d5f6738e21e26d06dbfc472ba107a0e05691fec666be4ac3265f8e5d
+  R5: 03c5432c464049b5b1673656e9d12072abf20cf7669d8349da75c7f3c140087f
+--- summary: 6 artifacts compared, 6 mismatches ---
+RESULT: DIFFERENT (6 of 6 artifacts differ)

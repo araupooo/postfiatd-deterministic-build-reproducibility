@@ -1,0 +1,19 @@
+=== blob verification: local checkout vs GitHub API tree @ 0085a1ff ===
+AGREE  CMakeLists.txt  local=c71fb6859903404297ae2744eefda803a25b9ab6 size=4638  api=c71fb6859903404297ae2744eefda803a25b9ab6 size=4638
+AGREE  cmake/RippledCompiler.cmake  local=bc3a62a48c48b34f402de240b905858171630362 size=7492  api=bc3a62a48c48b34f402de240b905858171630362 size=7492
+AGREE  cmake/RippledVersion.cmake  local=fda3cb6ff7bf4557dc2ec2d60471fc8664913613 size=530  api=fda3cb6ff7bf4557dc2ec2d60471fc8664913613 size=530
+AGREE  cmake/RippledCore.cmake  local=0198b5fbc25d8d382f0329fac6b4e4954da7a194 size=5443  api=0198b5fbc25d8d382f0329fac6b4e4954da7a194 size=5443
+AGREE  src/libxrpl/protocol/BuildInfo.cpp  local=8685f9ccf0ec0b6b79d69a641a66fb439c25a860 size=5194  api=8685f9ccf0ec0b6b79d69a641a66fb439c25a860 size=5194
+AGREE  src/xrpld/app/main/Main.cpp  local=24ca068579113cd8f89d019613d8223a252936a4 size=27781  api=24ca068579113cd8f89d019613d8223a252936a4 size=27781
+AGREE  src/xrpld/app/misc/NetworkOPs.cpp  local=57331a855843f0a528289fb3a96f3251926a3aa5 size=158487  api=57331a855843f0a528289fb3a96f3251926a3aa5 size=158487
+AGREE  conanfile.py  local=bff4c93aa35cabfb57ae0216078b7fb746ee2aa0 size=6258  api=bff4c93aa35cabfb57ae0216078b7fb746ee2aa0 size=6258
+AGREE  BUILD.md  local=60e6c0001abe7566cc6458e70df5f00f61516699 size=22484  api=60e6c0001abe7566cc6458e70df5f00f61516699 size=22484
+AGREE  Dockerfile  local=71c0296dea3ab7bd640a2f54da735eccc266b4f4 size=4209  api=71c0296dea3ab7bd640a2f54da735eccc266b4f4 size=4209
+AGREE  README.md  local=bddb09b3dd1c80566897ae26780ff63002dd814b size=7070  api=bddb09b3dd1c80566897ae26780ff63002dd814b size=7070
+AGREE  external/secp256k1/CMakeLists.txt  local=041bfa3dca057f2c116fa4247f30d270ff480577 size=18639  api=041bfa3dca057f2c116fa4247f30d270ff480577 size=18639
+AGREE  external/ed25519-donna/CMakeLists.txt  local=f060d530aa496e1f870ae70bfedb46c60dd25c86 size=1303  api=f060d530aa496e1f870ae70bfedb46c60dd25c86 size=1303
+AGREE  external/ed25519-donna/ed25519.c  local=58a755b8d338331dab191e7c3acb7c2921ac421f size=3687  api=58a755b8d338331dab191e7c3acb7c2921ac421f size=3687
+AGREE  external/secp256k1/src/secp256k1.c  local=a248519dfd84bd8aea22336c7b83ba4ae2720bac size=29389  api=a248519dfd84bd8aea22336c7b83ba4ae2720bac size=29389
+checked 15 files, 0 mismatches
+commit: 0085a1ff885d6a446369cf73a4430f75af22be55
+local HEAD: 0085a1ff885d6a446369cf73a4430f75af22be55

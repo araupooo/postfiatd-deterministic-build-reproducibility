@@ -1,0 +1,25 @@
+=== digest comparison: R1 vs R4 ===
+digests A: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/digests-R1.txt
+digests B: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/digests-R4.txt
+--- R1 ---
+457d75179198bd5a0c875de0b4d1b25f982cdb26ea03bb1a6be9306d71f77cbd  CMakeFiles/ed25519.dir/ed25519.c.o
+46fb3aeeffe0b55becaab28d743e359add00697e0e4db76ba6e5094f6108a7ae  lib/libsecp256k1.a
+0dad7a8ff9be23d7508914c9ea4bbf31f90409b950668eb8ebe3c06e7659edf6  output/Release/lib/libed25519.a
+da44af0e8e2ba5c391fa98b40b982b11b12a9b15678322b7421cfb3abe80f022  src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+4f2db09b88156e13ead1c34f019164d7d3041e1cd5bb790bec967a1dc3d5454c  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+56cc8461d5f6738e21e26d06dbfc472ba107a0e05691fec666be4ac3265f8e5d  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+--- R4 ---
+457d75179198bd5a0c875de0b4d1b25f982cdb26ea03bb1a6be9306d71f77cbd  CMakeFiles/ed25519.dir/ed25519.c.o
+46fb3aeeffe0b55becaab28d743e359add00697e0e4db76ba6e5094f6108a7ae  lib/libsecp256k1.a
+0dad7a8ff9be23d7508914c9ea4bbf31f90409b950668eb8ebe3c06e7659edf6  output/Release/lib/libed25519.a
+da44af0e8e2ba5c391fa98b40b982b11b12a9b15678322b7421cfb3abe80f022  src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+4f2db09b88156e13ead1c34f019164d7d3041e1cd5bb790bec967a1dc3d5454c  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+56cc8461d5f6738e21e26d06dbfc472ba107a0e05691fec666be4ac3265f8e5d  src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+MATCH: CMakeFiles/ed25519.dir/ed25519.c.o 457d75179198bd5a0c875de0b4d1b25f982cdb26ea03bb1a6be9306d71f77cbd
+MATCH: lib/libsecp256k1.a 46fb3aeeffe0b55becaab28d743e359add00697e0e4db76ba6e5094f6108a7ae
+MATCH: output/Release/lib/libed25519.a 0dad7a8ff9be23d7508914c9ea4bbf31f90409b950668eb8ebe3c06e7659edf6
+MATCH: src/CMakeFiles/secp256k1.dir/secp256k1.c.o da44af0e8e2ba5c391fa98b40b982b11b12a9b15678322b7421cfb3abe80f022
+MATCH: src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o 4f2db09b88156e13ead1c34f019164d7d3041e1cd5bb790bec967a1dc3d5454c
+MATCH: src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o 56cc8461d5f6738e21e26d06dbfc472ba107a0e05691fec666be4ac3265f8e5d
+--- summary: 6 artifacts compared, 0 mismatches ---
+RESULT: IDENTICAL
