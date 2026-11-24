@@ -1,0 +1,33 @@
+=== __FILE__ audit (pinned commit 0085a1ff) ===
+date: 2026-11-24T14:51:46Z
+files using __FILE__: 20
+occurrences: 52
+--- files ---
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/include/xrpl/beast/unit_test.h
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/include/xrpl/beast/unit_test/suite.h
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/app/Batch_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/app/Check_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/app/LedgerReplay_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/app/Loan_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/app/NFToken_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/app/Ticket_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/basics/Number_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/basics/base58_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/consensus/Consensus_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/overlay/reduce_relay_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/AMMInfo_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/AccountLines_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/AccountTx_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/Feature_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/JSONRPC_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/RPCCall_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/rpc/RPCOverload_test.cpp
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/src/test/shamap/SHAMapSync_test.cpp
+--- non-test, non-framework occurrences (must be empty) ---
+(none)
+--- test-framework uses (include/xrpl/beast/unit_test*.h — compiled into test binaries only) ---
+--- test-framework uses ---
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/include/xrpl/beast/unit_test.h:37:// #define BEAST_EXPECT(cond) {expect(cond, __FILE__ ":" ##
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/include/xrpl/beast/unit_test.h:39:#define BEAST_EXPECT(cond) expect(cond, __FILE__ ":" BEAST_EXPECT_S2(__LINE__))
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/include/xrpl/beast/unit_test/suite.h:574:#define BEAST_EXPECT(cond) expect(cond, __FILE__, __LINE__)
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src/include/xrpl/beast/unit_test/suite.h:583:    ((cond) ? (pass(), true) : (fail((reason), __FILE__, __LINE__), false))

@@ -1,0 +1,89 @@
+=== static build-system determinism audit ===
+source: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/postfiatd-src
+pinned HEAD: 0085a1ff885d6a446369cf73a4430f75af22be55
+date: 2026-11-24T14:29:09Z
+
+--- 1. __DATE__ / __TIME__ / __TIMESTAMP__ in C/C++ sources (classic timestamp embedding) ---
+OK: no __DATE__/__TIME__/__TIMESTAMP__ in src/ or include/
+
+--- 2. SOURCE_DATE_EPOCH handling anywhere in build files/docs ---
+OK(absent): no SOURCE_DATE_EPOCH handling in CMakeLists.txt, cmake/, conanfile.py, BUILD.md, Dockerfile, docs/build/
+
+--- 3. Path-remapping flags (-ffile-prefix-map / -fdebug-prefix-map / -fmacro-prefix-map) ---
+OK(absent): no -ffile-prefix-map / -fdebug-prefix-map / -fmacro-prefix-map in build files
+
+--- 4. Debug info in Release builds (-g) — embeds compilation directory in DWARF ---
+107:      $<$<CONFIG:Release>:-g>)
+BUILD.md:401:   cmake -DCMAKE_TOOLCHAIN_FILE:FILEPATH=build/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release -Dxrpld=ON -Dtests=ON ..
+Dockerfile:62:RUN cmake -DCMAKE_TOOLCHAIN_FILE:FILEPATH=build/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release -Dxrpld=ON -Dvalidator_keys=ON ..
+
+--- 5. Linker build-id flag ---
+cmake/RippledCompiler.cmake:111:      $<$<BOOL:${is_linux}>:-Wl,-z,relro,-z,now,--build-id>
+
+--- 6. Git metadata embedded at configure time (GIT_COMMIT_HASH / GIT_BRANCH) ---
+31:# make GIT_COMMIT_HASH define available to all sources
+37:        set(GIT_COMMIT_HASH "${gch}")
+38:        message(STATUS gch: ${GIT_COMMIT_HASH})
+39:        add_definitions(-DGIT_COMMIT_HASH="${GIT_COMMIT_HASH}")
+45:        set(GIT_BRANCH "${gb}")
+46:        message(STATUS gb: ${GIT_BRANCH})
+47:        add_definitions(-DGIT_BRANCH="${GIT_BRANCH}")
+-- uses in sources:
+src/libxrpl/protocol/BuildInfo.cpp:44:#ifdef GIT_COMMIT_HASH
+src/libxrpl/protocol/BuildInfo.cpp:45:    GIT_COMMIT_HASH
+src/xrpld/app/main/Main.cpp:516:#ifdef GIT_COMMIT_HASH
+src/xrpld/app/main/Main.cpp:517:        std::cout << "Git commit hash: " << GIT_COMMIT_HASH << std::endl;
+src/xrpld/app/main/Main.cpp:519:#ifdef GIT_BRANCH
+src/xrpld/app/main/Main.cpp:520:        std::cout << "Git build branch: " << GIT_BRANCH << std::endl;
+src/xrpld/app/misc/NetworkOPs.cpp:2767:#if defined(GIT_COMMIT_HASH) || defined(GIT_BRANCH)
+src/xrpld/app/misc/NetworkOPs.cpp:2770:#ifdef GIT_COMMIT_HASH
+src/xrpld/app/misc/NetworkOPs.cpp:2771:            x[jss::hash] = GIT_COMMIT_HASH;
+src/xrpld/app/misc/NetworkOPs.cpp:2773:#ifdef GIT_BRANCH
+src/xrpld/app/misc/NetworkOPs.cpp:2774:            x[jss::branch] = GIT_BRANCH;
+
+--- 7. __FILE__ uses (embeds the path as passed to the compiler) ---
+files using __FILE__: 20
+occurrences: 52
+src/test/app/Batch_test.cpp:2326:                        __FILE__,
+src/test/app/Batch_test.cpp:2336:                        __FILE__,
+src/test/app/Check_test.cpp:2045:                    __FILE__,
+src/test/app/LedgerReplay_test.cpp:1109:                    __FILE__,
+src/test/app/LedgerReplay_test.cpp:1117:                    __FILE__,
+src/test/app/Loan_test.cpp:361:                    __FILE__,
+src/test/app/NFToken_test.cpp:253:                        fail(ss.str(), __FILE__, line);
+src/test/app/NFToken_test.cpp:357:                    fail(ss.str(), __FILE__, line);
+src/test/app/NFToken_test.cpp:3958:                            fail(ss.str(), __FILE__, line);
+src/test/app/NFToken_test.cpp:4202:                            this->fail(ss.str(), __FILE__, line);
+
+--- 8. file(GLOB...) source collection (CMake sorts GLOB results lexicographically since 3.6) ---
+cmake/RippledCore.cmake:19:file(GLOB_RECURSE protos "include/xrpl/proto/org/*.proto")
+cmake/RippledCore.cmake:123:file(GLOB_RECURSE sources CONFIGURE_DEPENDS
+cmake/RippledCore.cmake:162:  file(GLOB_RECURSE sources CONFIGURE_DEPENDS
+cmake/RippledCore.cmake:168:    file(GLOB_RECURSE sources CONFIGURE_DEPENDS
+cmake/RippledDocs.cmake:22:file(GLOB_RECURSE doxygen_input
+cmake/add_module.cmake:18:  file(GLOB_RECURSE sources CONFIGURE_DEPENDS
+cmake/xrpl_add_test.cmake:6:  file(GLOB_RECURSE sources CONFIGURE_DEPENDS
+
+--- 9. Linker selection (mold/gold/lld optional — environment-dependent linker changes output) ---
+133:if (use_mold)
+136:    COMMAND ${CMAKE_CXX_COMPILER} -fuse-ld=mold -Wl,--version
+139:    target_link_libraries (common INTERFACE -fuse-ld=mold)
+142:elseif (use_gold AND is_gcc)
+145:    COMMAND ${CMAKE_CXX_COMPILER} -fuse-ld=gold -Wl,--version
+163:        -fuse-ld=gold
+174:elseif (use_lld)
+177:    COMMAND ${CMAKE_CXX_COMPILER} -fuse-ld=lld -Wl,--version
+180:    target_link_libraries (common INTERFACE -fuse-ld=lld)
+
+--- 10. date/time calls in build scripts (cmake/, scripts/, conan/) ---
+none found
+
+--- 11. Version string source (BuildInfo.cpp) ---
+39:char const* const versionString = "1.0.9"
+71:        std::string const s = versionString;
+160:    static std::uint64_t const cookie = {encodeSoftwareVersion(versionString)};
+
+--- 12. Archive determinism: ar/ranlib invocation ---
+no explicit ar/ranlib settings (CMake + binutils defaults apply)
+
+=== static audit done ===

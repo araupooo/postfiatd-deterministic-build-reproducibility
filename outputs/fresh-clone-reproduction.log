@@ -1,0 +1,37 @@
+=== postfiatd deterministic-build reproducibility audit ===
+pack root: /tmp/repro-pack5
+pinned commit: 0085a1ff885d6a446369cf73a4430f75af22be55
+started: 2026-11-24T15:48:40Z
+cloning postfiatd at 0085a1ff885d6a446369cf73a4430f75af22be55...
+copying second source tree at a different absolute path...
+source /tmp/repro-pack5/work/postfiatd-src HEAD: 0085a1ff885d6a446369cf73a4430f75af22be55
+source /tmp/repro-pack5/work/postfiatd-src-b HEAD: 0085a1ff885d6a446369cf73a4430f75af22be55
+--- static build-system audit ---
+static audit written to outputs/static-audit.log
+--- subset build R1 (gcc) ---
+subset build R1 done (see outputs/subset-R1.log)
+--- subset build R2 (gcc) ---
+subset build R2 done (see outputs/subset-R2.log)
+--- subset build R3 (gcc) ---
+subset build R3 done (see outputs/subset-R3.log)
+--- subset build R4 (gcc) ---
+subset build R4 done (see outputs/subset-R4.log)
+--- subset build R5 (gcc-12) ---
+subset build R5 done (see outputs/subset-R5.log)
+--- subset build R6 (clang) ---
+subset build R6 done (see outputs/subset-R6.log)
+--- digest comparisons ---
+RESULT: IDENTICAL
+RESULT: DIFFERENT (6 of 6 artifacts differ)
+RESULT: IDENTICAL
+RESULT: DIFFERENT (6 of 6 artifacts differ)
+RESULT: DIFFERENT (6 of 6 artifacts differ)
+--- dependency fetchability check ---
+dependency check written to outputs/deps-fetch-check.log
+full build skipped (pass --with-full-build to run scripts/build_full.sh)
+--- writing run-manifest.json ---
+=== audit complete: 2026-11-24T15:56:43Z ===
+headline: R1==R2 identical (same-path repeat); R1!=R3 (different paths, 6/6 differ);
+R1==R4 identical (prefix-map remediation works); R5/R6 differ (expected toolchain variation).
+SHA256SUMS regenerated: 40 entries
+=== run_all.sh finished cleanly: 2026-11-24T15:56:43Z ===

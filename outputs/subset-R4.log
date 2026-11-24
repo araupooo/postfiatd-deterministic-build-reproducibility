@@ -1,0 +1,150 @@
+=== subset build R4 ===
+source dir : /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b
+build root : /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b
+compiler   : gcc
+extra flags: -ffile-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a -fdebug-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a -fmacro-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a -ffile-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a -fdebug-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a -fmacro-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a
+started    : 2026-11-24T14:29:32Z
+pinned HEAD: 0085a1ff885d6a446369cf73a4430f75af22be55
+uname      : Linux htch-runtime 7.0.0-44-generic #1 SMP PREEMPT_DYNAMIC Fri Nov  6 01:23:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+compiler version:
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+cmake version: cmake version 3.28.3
+ar version   : GNU ar (GNU Binutils for Ubuntu) 2.42
+ld version   : GNU ld (GNU Binutils for Ubuntu) 2.42
+--- configuring secp256k1 ---
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Performing Test HAVE_X86_64_ASM
+-- Performing Test HAVE_X86_64_ASM - Success
+-- Could NOT find Valgrind (missing: Valgrind_INCLUDE_DIR Valgrind_WORKS) 
+-- Performing Test C_SUPPORTS__PEDANTIC
+-- Performing Test C_SUPPORTS__PEDANTIC - Success
+-- Performing Test C_SUPPORTS__WALL
+-- Performing Test C_SUPPORTS__WALL - Success
+-- Performing Test C_SUPPORTS__WCAST_ALIGN
+-- Performing Test C_SUPPORTS__WCAST_ALIGN - Success
+-- Performing Test C_SUPPORTS__WCAST_ALIGN_STRICT
+-- Performing Test C_SUPPORTS__WCAST_ALIGN_STRICT - Success
+-- Performing Test C_SUPPORTS__WCONDITIONAL_UNINITIALIZED
+-- Performing Test C_SUPPORTS__WCONDITIONAL_UNINITIALIZED - Failed
+-- Performing Test C_SUPPORTS__WEXTRA
+-- Performing Test C_SUPPORTS__WEXTRA - Success
+-- Performing Test C_SUPPORTS__WNESTED_EXTERNS
+-- Performing Test C_SUPPORTS__WNESTED_EXTERNS - Success
+-- Performing Test C_SUPPORTS__WNO_LONG_LONG
+-- Performing Test C_SUPPORTS__WNO_LONG_LONG - Success
+-- Performing Test C_SUPPORTS__WNO_OVERLENGTH_STRINGS
+-- Performing Test C_SUPPORTS__WNO_OVERLENGTH_STRINGS - Success
+-- Performing Test C_SUPPORTS__WNO_UNUSED_FUNCTION
+-- Performing Test C_SUPPORTS__WNO_UNUSED_FUNCTION - Success
+-- Performing Test C_SUPPORTS__WRESERVED_IDENTIFIER
+-- Performing Test C_SUPPORTS__WRESERVED_IDENTIFIER - Failed
+-- Performing Test C_SUPPORTS__WSHADOW
+-- Performing Test C_SUPPORTS__WSHADOW - Success
+-- Performing Test C_SUPPORTS__WSTRICT_PROTOTYPES
+-- Performing Test C_SUPPORTS__WSTRICT_PROTOTYPES - Success
+-- Performing Test C_SUPPORTS__WUNDEF
+-- Performing Test C_SUPPORTS__WUNDEF - Success
+
+
+secp256k1 configure summary
+===========================
+Build artifacts:
+  library type ........................ Static
+Optional modules:
+  ECDH ................................ ON
+  ECDSA pubkey recovery ............... OFF
+  extrakeys ........................... ON
+  schnorrsig .......................... ON
+  musig ............................... ON
+  ElligatorSwift ...................... ON
+Parameters:
+  ecmult window size .................. 15
+  ecmult gen table size ............... 86 KiB
+Optional features:
+  assembly ............................ x86_64
+  external callbacks .................. OFF
+Optional binaries:
+  benchmark ........................... OFF
+  noverify_tests ...................... OFF
+  tests ............................... OFF
+  exhaustive tests .................... OFF
+  ctime_tests ......................... OFF
+  examples ............................ OFF
+
+Cross compiling ....................... FALSE
+Valgrind .............................. OFF
+Preprocessor defined macros ........... ENABLE_MODULE_ELLSWIFT=1 ENABLE_MODULE_MUSIG=1 ENABLE_MODULE_SCHNORRSIG=1 ENABLE_MODULE_EXTRAKEYS=1 ENABLE_MODULE_ECDH=1 ECMULT_WINDOW_SIZE=15 COMB_BLOCKS=43 COMB_TEETH=6 USE_ASM_X86_64=1
+C compiler ............................ GNU 13.3.0, /usr/bin/gcc
+CFLAGS ................................ -O3 -DNDEBUG -g -fstack-protector -Wall -ffile-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a -fdebug-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a -fmacro-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-a -ffile-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a -fdebug-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a -fmacro-prefix-map=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-a
+Compile options ....................... -pedantic -Wall -Wcast-align -Wcast-align=strict -Wextra -Wnested-externs -Wno-long-long -Wno-overlength-strings -Wno-unused-function -Wshadow -Wstrict-prototypes -Wundef
+Build type:
+ - CMAKE_BUILD_TYPE ................... Release
+ - CFLAGS ............................. -O2 
+ - LDFLAGS for executables ............ 
+ - LDFLAGS for shared libraries ....... 
+
+-- Configuring done (3.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1
+--- building secp256k1 ---
+[ 25%] Building C object src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+[ 50%] Building C object src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+[ 50%] Built target secp256k1_precomputed
+[ 75%] Building C object src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+[100%] Linking C static library ../lib/libsecp256k1.a
+[100%] Built target secp256k1
+--- configuring ed25519-donna ---
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/ed25519
+--- building ed25519-donna ---
+[ 50%] Building C object CMakeFiles/ed25519.dir/ed25519.c.o
+In file included from /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519.c:20:
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h: In function 'ed25519_hash_init':
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h:200:9: warning: 'SHA512_Init' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  200 |         SHA512_Init(ctx);
+      |         ^~~~~~~~~~~
+In file included from /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h:194:
+/usr/include/openssl/sha.h:123:27: note: declared here
+  123 | OSSL_DEPRECATEDIN_3_0 int SHA512_Init(SHA512_CTX *c);
+      |                           ^~~~~~~~~~~
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h: In function 'ed25519_hash_update':
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h:205:9: warning: 'SHA512_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  205 |         SHA512_Update(ctx, in, inlen);
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/sha.h:124:27: note: declared here
+  124 | OSSL_DEPRECATEDIN_3_0 int SHA512_Update(SHA512_CTX *c,
+      |                           ^~~~~~~~~~~~~
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h: In function 'ed25519_hash_final':
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b/external/ed25519-donna/ed25519-hash.h:210:9: warning: 'SHA512_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  210 |         SHA512_Final(hash, ctx);
+      |         ^~~~~~~~~~~~
+/usr/include/openssl/sha.h:126:27: note: declared here
+  126 | OSSL_DEPRECATEDIN_3_0 int SHA512_Final(unsigned char *md, SHA512_CTX *c);
+      |                           ^~~~~~~~~~~~
+[100%] Linking C static library output/Release/lib/libed25519.a
+[100%] Built target ed25519
+--- digests (SHA-256, full 64 hex chars) ---
+# R4 digests — 2026-11-24T14:29:54Z
+# source: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-src-b
+# build : /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b
+457d75179198bd5a0c875de0b4d1b25f982cdb26ea03bb1a6be9306d71f77cbd  /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/ed25519/CMakeFiles/ed25519.dir/ed25519.c.o
+0dad7a8ff9be23d7508914c9ea4bbf31f90409b950668eb8ebe3c06e7659edf6  /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/ed25519/output/Release/lib/libed25519.a
+46fb3aeeffe0b55becaab28d743e359add00697e0e4db76ba6e5094f6108a7ae  /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/lib/libsecp256k1.a
+da44af0e8e2ba5c391fa98b40b982b11b12a9b15678322b7421cfb3abe80f022  /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/src/CMakeFiles/secp256k1.dir/secp256k1.c.o
+4f2db09b88156e13ead1c34f019164d7d3041e1cd5bb790bec967a1dc3d5454c  /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult.c.o
+56cc8461d5f6738e21e26d06dbfc472ba107a0e05691fec666be4ac3265f8e5d  /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-a65f0c78/work/subset-build-b/secp256k1/src/CMakeFiles/secp256k1_precomputed.dir/precomputed_ecmult_gen.c.o
+finished   : 2026-11-24T14:29:54Z
+=== subset build R4 done ===
